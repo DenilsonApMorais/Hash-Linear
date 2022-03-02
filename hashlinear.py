@@ -10,6 +10,7 @@ class Hashlinear:
 
     def inserir(self):
         aux2 = 0
+        contAux = 0
         print('chave hash dentro do inserir',self.chaveHash)
         for cont in range(0,4): 
             if matriz[self.chaveHash][cont] == -1: # se tiver elemento neste lugar
@@ -20,11 +21,24 @@ class Hashlinear:
                 #### continuar daki 
                 aux2 = aux2 + 1 ###incremento
                 if aux2 == 4:   ## se o bucket encheu 
-                    pilha = []
-                    pilha.append(matriz[self.chaveHash][:])
-                    print('essa é a pilha',pilha[:]) 
-                    print('encheu!!')
+                    contAux = contAux+1
+                    print('o conta ta valendo:',cont)
+                    
+                    listAux = [-1,-1,-1,-1]
+                    matriz.append(listAux[:])
+                    matriz[4][contAux] = self.chave
 
+
+                    print('teste da nova incerção',matriz[:][:])
+                    """
+                    listaAux = []
+                    #listaAux.append(matriz[self.chaveHash][:])
+                    #print("lista",listaAux[:])
+                    listaAux.append(matriz[self.chaveHash][:])
+                    print('essa é a pilha',listaAux[:]) 
+
+                    print('encheu!!')
+"""
                 #print('não posso inserir')
 
 
