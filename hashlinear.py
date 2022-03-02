@@ -20,8 +20,9 @@ class Hashlinear:
                 #### continuar daki 
                 aux2 = aux2 + 1 ###incremento
                 if aux2 == 4:   ## se o bucket encheu 
-
-                    matriz[self.chaveHash][:] 
+                    pilha = []
+                    pilha.append(matriz[self.chaveHash][:])
+                    print('essa é a pilha',pilha[:]) 
                     print('encheu!!')
 
                 #print('não posso inserir')
